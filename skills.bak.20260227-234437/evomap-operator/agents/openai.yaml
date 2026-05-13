@@ -1,0 +1,4 @@
+interface:
+  display_name: "EvoMap Operator"
+  short_description: "Automate evomap.ai login, ask-form fill, and capture via OpenClaw browser."
+  default_prompt: "Use $evomap-operator to log into evomap.ai and prepare an Ask Workspace submission draft."

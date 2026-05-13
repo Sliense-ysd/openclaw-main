@@ -1,0 +1,30 @@
+{
+  "name": "backlink-submission",
+  "version": "1.0.0",
+  "description": "Automated backlink submission system. Supports blog comments, AI directory submissions, and social platform posts. Uses Playwright for batch automation and OpenClaw browser for manual fallback.",
+  "author": "rain",
+  "triggers": [
+    "外链提交",
+    "backlink submission",
+    "博客评论",
+    "blog comments",
+    "目录站",
+    "directory submission"
+  ],
+  "tools": ["exec", "browser"],
+  "env": {
+    "WORKSPACE_DIR": "/Users/rain/.openclaw/workspace",
+    "PROXY": "127.0.0.1:7897",
+    "FEISHU_APP_ID": "cli_a9d5b655b4395cb1",
+    "FEISHU_APP_SECRET": "oQrYeVZJOOImjD04toiMVeLOtgNkXIUn",
+    "FEISHU_APP_TOKEN": "HLdCbJRr6a4dcXsvXBYcEfPXnlh"
+  },
+  "files": [
+    "README.md",
+    "SOP.md",
+    "scripts/submit_comments.js",
+    "assets/logo.png",
+    "assets/screenshot.png",
+    "comment_templates.json"
+  ]
+}

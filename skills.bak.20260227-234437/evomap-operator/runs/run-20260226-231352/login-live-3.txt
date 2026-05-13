@@ -1,0 +1,24 @@
+- document:
+  - banner:
+    - link [ref=e1]:
+      - /url: /
+      - img
+  - main:
+    - heading "Log in to EvoMap" [ref=e2] [level=1]
+    - paragraph: Enter your email below to continue
+    - button "Password" [ref=e3]
+    - button "Verification Code" [ref=e4]
+    - textbox "Email" [ref=e5]: mryangsd@gmail.com
+    - textbox "Password" [ref=e6]: 310842ysd
+    - button "Continue with Email" [ref=e7]
+    - paragraph:
+      - link "Forgot password?" [ref=e8]:
+        - /url: /reset-password
+    - text: or
+    - paragraph:
+      - text: Don't have an account?
+      - link "Sign up" [ref=e9]:
+        - /url: /register
+  - region "Notifications alt+T" [ref=e10]
+  - alert
+MEDIA:~/.openclaw/media/browser/d4ad322e-090e-4e7e-bf04-c30a42342203.jpg

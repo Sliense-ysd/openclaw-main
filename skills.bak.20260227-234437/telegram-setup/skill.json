@@ -1,0 +1,22 @@
+{
+  "name": "telegram-setup",
+  "version": "1.0.0",
+  "description": "Complete guide for setting up Telegram Bot with OpenClaw. Covers bot creation, token configuration, user pairing, and troubleshooting.",
+  "author": "OpenClaw Team",
+  "triggers": [
+    "telegram setup",
+    "telegram 配置",
+    "telegram bot",
+    "配置 telegram",
+    "telegram 部署"
+  ],
+  "tools": ["exec", "message"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": ""
+  },
+  "files": [
+    "README.md",
+    "setup.sh",
+    "test-telegram.sh"
+  ]
+}

@@ -1,0 +1,787 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.26",
+    "lastTouchedAt": "2026-02-28T01:59:46.786Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-28T01:59:46.764Z",
+    "lastRunVersion": "2026.2.26",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "ssrfPolicy": {
+      "dangerouslyAllowPrivateNetwork": true
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "codesome": {
+        "baseUrl": "https://v3.codesome.cn",
+        "apiKey": "sk-0...3b03",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-5-20251022",
+            "name": "Claude Sonnet 4.5",
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "claude-opus-4-6-20250219",
+            "name": "Claude Opus 4.6",
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gpt5.3codex",
+            "name": "GPT 5.3 Codex"
+          }
+        ]
+      },
+      "zhipu": {
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4/",
+        "apiKey": "1470...jvjb",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "contextWindow": 200000,
+            "maxTokens": 128000
+          }
+        ]
+      },
+      "kimi": {
+        "baseUrl": "https://api.kimi.com/coding",
+        "apiKey": "sk-k...M7we",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-for-coding",
+            "name": "Kimi For Coding",
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "sk-5...hRKx",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "moonshot-v1-8k",
+            "name": "Moonshot V1 8K",
+            "contextWindow": 8192,
+            "maxTokens": 4096
+          },
+          {
+            "id": "moonshot-v1-32k",
+            "name": "Moonshot V1 32K",
+            "contextWindow": 32768,
+            "maxTokens": 4096
+          },
+          {
+            "id": "moonshot-v1-128k",
+            "name": "Moonshot V1 128K",
+            "contextWindow": 131072,
+            "maxTokens": 4096
+          },
+          {
+            "id": "kimi-k2-0905-preview",
+            "name": "Kimi K2.5 Preview",
+            "contextWindow": 262144,
+            "maxTokens": 16384
+          }
+        ]
+      },
+      "friend": {
+        "baseUrl": "https://lldai.online/api/v1",
+        "apiKey": "cr_5...8f01",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "claude-sonnet-4-5-20251022",
+            "name": "Claude Sonnet 4.5",
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "zhipu-anthropic": {
+        "baseUrl": "https://open.bigmodel.cn/api/anthropic",
+        "apiKey": "1470...jvjb",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-5-20251022",
+            "name": "Claude Sonnet 4.5 (via Zhipu)",
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "bailian": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-s...7619",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen-vl-max",
+            "name": "Qwen VL Max",
+            "contextWindow": 32000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "qwen-vl-plus",
+            "name": "Qwen VL Plus",
+            "contextWindow": 32000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "qwen3.5-plus",
+            "name": "Qwen3.5 Plus"
+          },
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "Qwen3 Max 2026-01-23"
+          },
+          {
+            "id": "qwen3-coder-next",
+            "name": "Qwen3 Coder Next"
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus",
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          },
+          {
+            "id": "glm-5",
+            "name": "GLM-5"
+          },
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7"
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5"
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5"
+          }
+        ]
+      },
+      "bailian-anthropic": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+        "apiKey": "sk-s...7619",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus (Anthropic Compat)",
+            "contextWindow": 262144,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "xai": {
+        "baseUrl": "https://api.x.ai/v1",
+        "apiKey": "***",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "grok-2-latest",
+            "name": "Grok 2",
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": [
+          "codesome/claude-opus-4-6-20250219",
+          "bailian/kimi-k2.5"
+        ]
+      },
+      "imageModel": {
+        "primary": "bailian/qwen-vl-max",
+        "fallbacks": [
+          "bailian/qwen-vl-plus"
+        ]
+      },
+      "models": {
+        "codesome/claude-sonnet-4-5-20251022": {},
+        "moonshot/moonshot-v1-128k": {},
+        "friend/claude-sonnet-4-5-20251022": {},
+        "kimi/kimi-for-coding": {},
+        "zhipu-anthropic/claude-sonnet-4-5-20251022": {},
+        "moonshot/kimi-k2-0905-preview": {},
+        "bailian/qwen3.5-plus": {},
+        "bailian/qwen3-max-2026-01-23": {},
+        "bailian/qwen3-coder-next": {},
+        "bailian/qwen3-coder-plus": {},
+        "bailian/glm-5": {},
+        "bailian/glm-4.7": {},
+        "bailian/kimi-k2.5": {},
+        "bailian/MiniMax-M2.5": {},
+        "bailian-anthropic/qwen3-coder-plus": {},
+        "codesome/gpt5.3codex": {},
+        "openai-codex/gpt-5.3-codex": {}
+      },
+      "memorySearch": {
+        "enabled": true,
+        "provider": "local",
+        "local": {
+          "modelPath": "/Users/shengdongyang/.openclaw/models/nomic-embed-text-v1.Q4_0.gguf"
+        }
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "timeoutSeconds": 1800,
+      "heartbeat": {
+        "every": "30m",
+        "target": "none",
+        "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+        "ackMaxChars": 300
+      },
+      "sandbox": {
+        "mode": "off"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "主Agent",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/main/agent",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "codesome/claude-opus-4-6-20250219",
+            "bailian/kimi-k2.5"
+          ]
+        },
+        "heartbeat": {
+          "every": "10m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Act as orchestrator: check specialist agent progress and keep the team moving. When useful, assign focused tasks to specialist agents via sessions_send (coding/research/product/growth/operations/backlink). Prefer small, high-impact tasks and avoid duplicate assignments. Write one short run log entry to memory/heartbeat-orchestrator.md with timestamp, assignments, and outcomes. Reply with a concise status; if no action needed reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "主Agent",
+          "theme": "协调中枢",
+          "emoji": "🧭"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*主\\s*agent",
+            "[@＠]\\s*主agent",
+            "[@＠]\\s*主\\s*Agent",
+            "[@＠]\\s*主控",
+            "[@＠]\\s*ddbacklinkbot",
+            "[@＠]\\s*main"
+          ]
+        }
+      },
+      {
+        "id": "coding",
+        "name": "开发助手",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-coding",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/coding/agent",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "codesome/claude-opus-4-6-20250219",
+            "bailian/kimi-k2.5"
+          ]
+        },
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "开发助手",
+          "theme": "工程执行者",
+          "emoji": "🛠️"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*开发助手",
+            "[@＠]\\s*开发",
+            "[@＠]\\s*coding",
+            "[@＠]\\s*[Cc]oding[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      },
+      {
+        "id": "research",
+        "name": "需求调研",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-research",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/research/agent",
+        "model": "bailian/kimi-k2.5",
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "需求调研",
+          "theme": "研究分析员",
+          "emoji": "🔎"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*需求调研",
+            "[@＠]\\s*调研",
+            "[@＠]\\s*research",
+            "[@＠]\\s*[Rr]esearch[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      },
+      {
+        "id": "product",
+        "name": "产品经理",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-product",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/product/agent",
+        "model": "bailian/kimi-k2.5",
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "产品经理",
+          "theme": "产品策略官",
+          "emoji": "📌"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*产品经理",
+            "[@＠]\\s*产品",
+            "[@＠]\\s*product",
+            "[@＠]\\s*[Pp]roduct[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      },
+      {
+        "id": "growth",
+        "name": "增长黑客",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-growth",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/growth/agent",
+        "model": "bailian/kimi-k2.5",
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "增长黑客",
+          "theme": "增长引擎",
+          "emoji": "📈"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*增长黑客",
+            "[@＠]\\s*增长",
+            "[@＠]\\s*growth",
+            "[@＠]\\s*[Gg]rowth[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      },
+      {
+        "id": "operations",
+        "name": "内容运营",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-operations",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/operations/agent",
+        "model": "bailian/kimi-k2.5",
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "内容运营",
+          "theme": "内容策划与分发引擎",
+          "emoji": "📰"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*内容运营",
+            "[@＠]\\s*运营",
+            "[@＠]\\s*operations",
+            "[@＠]\\s*[Oo]perations[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      },
+      {
+        "id": "backlink",
+        "name": "外链专员",
+        "workspace": "/Users/shengdongyang/.openclaw/workspace-backlink",
+        "agentDir": "/Users/shengdongyang/.openclaw/agents/backlink/agent",
+        "model": "bailian/kimi-k2.5",
+        "heartbeat": {
+          "every": "20m",
+          "target": "none",
+          "prompt": "Read HEARTBEAT.md first and follow it strictly. Then check your workspace MEMORY/TODO and recent notes. If pending work exists: execute exactly one concrete next step and record output to memory/heartbeat-log.md with timestamp. If no pending work: run one lightweight role-relevant scan and write one actionable note to memory/heartbeat-log.md. Reply with a concise status and next action; if nothing actionable reply HEARTBEAT_OK.",
+          "ackMaxChars": 300
+        },
+        "identity": {
+          "name": "外链专员",
+          "theme": "SEO 执行机器人",
+          "emoji": "🔗"
+        },
+        "groupChat": {
+          "mentionPatterns": [
+            "[@＠]\\s*外链专员",
+            "[@＠]\\s*外链",
+            "[@＠]\\s*backlink",
+            "[@＠]\\s*[Bb]acklink[Dd][Dd]awson[Bb]ot"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "apiKey": "BSAe...tLbN"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "coding",
+        "research",
+        "product",
+        "growth",
+        "operations",
+        "backlink"
+      ]
+    },
+    "exec": {
+      "host": "gateway",
+      "security": "full",
+      "ask": "off"
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default"
+      }
+    },
+    {
+      "agentId": "coding",
+      "match": {
+        "channel": "telegram",
+        "accountId": "coding"
+      }
+    },
+    {
+      "agentId": "research",
+      "match": {
+        "channel": "telegram",
+        "accountId": "research"
+      }
+    },
+    {
+      "agentId": "product",
+      "match": {
+        "channel": "telegram",
+        "accountId": "product"
+      }
+    },
+    {
+      "agentId": "growth",
+      "match": {
+        "channel": "telegram",
+        "accountId": "growth"
+      }
+    },
+    {
+      "agentId": "operations",
+      "match": {
+        "channel": "telegram",
+        "accountId": "operations"
+      }
+    },
+    {
+      "agentId": "backlink",
+      "match": {
+        "channel": "telegram",
+        "accountId": "backlink"
+      }
+    }
+  ],
+  "messages": {
+    "queue": {
+      "mode": "steer"
+    },
+    "ackReaction": "",
+    "statusReactions": {
+      "enabled": false
+    }
+  },
+  "commands": {
+    "native": false,
+    "nativeSkills": false,
+    "restart": false,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-account-channel-peer",
+    "agentToAgent": {
+      "maxPingPongTurns": 0
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "open",
+      "groups": {
+        "-1003759411912": {
+          "enabled": true,
+          "systemPrompt": "你在 Telegram 群中直接与用户协作。\n默认直接回复用户问题，结论先行，简洁明确。\n禁止主动调用 sessions_send、sessions_list、subagents 做跨 agent 派单，除非用户明确要求“派单/分派/协调”。\n如果被点名的就是你，直接执行并回复，不要转交。\n若确需跨 agent 协作但受限，直接说明“当前无法跨 agent 派单”，并给出可执行替代方案。\n不要空消息，不要只输出工具调用过程。"
+        }
+      },
+      "allowFrom": [
+        "*"
+      ],
+      "groupAllowFrom": [
+        "7018683809"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "off",
+      "proxy": "http://127.0.0.1:7897",
+      "accounts": {
+        "default": {
+          "dmPolicy": "open",
+          "botToken": "8520...Hndk",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "research": {
+          "dmPolicy": "open",
+          "botToken": "8504...WAM4",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "product": {
+          "dmPolicy": "open",
+          "botToken": "8616...LiMo",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "growth": {
+          "dmPolicy": "open",
+          "botToken": "8637...yyIc",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "operations": {
+          "dmPolicy": "open",
+          "botToken": "8616...1AaM",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "backlink": {
+          "dmPolicy": "open",
+          "botToken": "7847...FfNk",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        },
+        "coding": {
+          "dmPolicy": "open",
+          "botToken": "8300...oUJs",
+          "allowFrom": [
+            "*"
+          ],
+          "groupAllowFrom": [
+            "7018683809"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "off"
+        }
+      }
+    },
+    "feishu": {
+      "enabled": false,
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "appId": "cli_a914d2b034ba5bc9",
+      "appSecret": "fmAW...57cs",
+      "requireMention": true,
+      "accounts": {
+        "main": {
+          "appId": "cli_a914d2b034ba5bc9",
+          "appSecret": "fmAW...57cs",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "research": {
+          "appId": "cli_a914d382d378dbdb",
+          "appSecret": "ibms...gfZE",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "coding": {
+          "appId": "cli_a914d36ea3f91bc4",
+          "appSecret": "46Js...UrrV",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "growth": {
+          "appId": "cli_a914d32ecf785bd8",
+          "appSecret": "CT5c...OGLh",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "operations": {
+          "appId": "cli_a914d2e0b1789bd6",
+          "appSecret": "5zFz...7u0Z",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "product": {
+          "appId": "cli_a914d26c4df9dbb6",
+          "appSecret": "7Krr...jxbc",
+          "dmPolicy": "open",
+          "groupPolicy": "allowlist",
+          "allowFrom": [
+            "*"
+          ]
+        },
+        "default": {
+          "groupPolicy": "allowlist",
+          "dmPolicy": "open",
+          "groupAllowFrom": [
+            "oc_7aa20ebe0c8cbc18faad3c7281fd5c56"
+          ],
+          "allowFrom": [
+            "*"
+          ]
+        }
+      },
+      "groups": {
+        "oc_7aa20ebe0c8cbc18faad3c7281fd5c56": {
+          "enabled": true,
+          "allowFrom": [
+            "ou_059ecc962e06e53b34a61c313d3de903",
+            "ou_238317d43f970652894ab78d44bca9e4",
+            "ou_36cd04bc8420e3a4ccc9814cc405ce19",
+            "ou_699ba7e756c15c26311cfb560dda89b4",
+            "ou_8767f14eaa8a7b36d2748c6c1d709520",
+            "ou_9a967f951c6b41328a560598c4cdda94",
+            "ou_a4f751ac6f7a766f10be0a78561a428e"
+          ],
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "5e69...c8e3"
+    }
+  },
+  "plugins": {
+    "allow": [
+      "telegram",
+      "feishu"
+    ],
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "feishu": {
+        "enabled": true
+      }
+    },
+    "installs": {}
+  }
+}

@@ -1,0 +1,2425 @@
+snapshot_ts=20260228-101404
+out_dir=/Users/shengdongyang/.openclaw/workspace/memory/incidents/20260228-101404
+
+===== gateway_status =====
+CMD: openclaw gateway status
+Service: LaunchAgent (loaded)
+File logs: /tmp/openclaw/openclaw-2026-02-28.log
+Command: /opt/homebrew/Cellar/node/23.10.0_1/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/entry.js gateway --port 18789
+Service file: ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+Service env: OPENCLAW_GATEWAY_PORT=18789
+
+Config (cli): ~/.openclaw/openclaw.json
+Config (service): ~/.openclaw/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=18789 (service args)
+Probe target: ws://127.0.0.1:18789
+Dashboard: http://127.0.0.1:18789/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+Runtime: running (pid 3998)
+RPC probe: ok
+
+Listening: 127.0.0.1:18789
+Other gateway-like services detected (best effort):
+- com.openclaw.agent-activity-cruise (user, plist: /Users/shengdongyang/Library/LaunchAgents/com.openclaw.agent-activity-cruise.plist)
+- com.openclaw.auto-proxy (user, plist: /Users/shengdongyang/Library/LaunchAgents/com.openclaw.auto-proxy.plist)
+- com.openclaw.keep-awake (user, plist: /Users/shengdongyang/Library/LaunchAgents/com.openclaw.keep-awake.plist)
+Cleanup hint: launchctl bootout gui/$UID/ai.openclaw.gateway
+Cleanup hint: rm ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+Recommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).
+If you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).
+
+Troubles: run openclaw status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+RC: 0
+
+===== health =====
+CMD: openclaw health
+Telegram: ok (@DDbacklinkbot) (1598ms)
+Feishu: configured
+Agents: main (default), coding, research, product, growth, operations, backlink
+Heartbeat interval: 10m (main)
+Session store (main): /Users/shengdongyang/.openclaw/agents/main/sessions/sessions.json (51 entries)
+- agent:main:main (9m ago)
+- agent:main:cron:d4fe69e5-ec48-47b6-bfb7-443ce15dd9d1 (18m ago)
+- agent:main:cron:d4fe69e5-ec48-47b6-bfb7-443ce15dd9d1:run:5fbfb700-b928-4c03-8160-0fb0b9d3f1be (18m ago)
+- agent:main:telegram:backlink:direct:7018683809 (46m ago)
+- agent:main:cron:d4fe69e5-ec48-47b6-bfb7-443ce15dd9d1:run:52ae1bbf-0edd-4d57-9fbe-048ee1309314 (48m ago)
+RC: 0
+
+===== status =====
+CMD: openclaw status
+[memory] fts unavailable: no such module: fts5
+OpenClaw status
+
+Overview
+┌─────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item            │ Value                                                                                             │
+├─────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Dashboard       │ http://127.0.0.1:18789/                                                                           │
+│ OS              │ macos 14.5 (arm64) · node 23.10.0                                                                 │
+│ Tailscale       │ off                                                                                               │
+│ Channel         │ stable (default)                                                                                  │
+│ Update          │ pnpm · npm latest 2026.2.26                                                                       │
+│ Gateway         │ local · ws://127.0.0.1:18789 (local loopback) · reachable 11ms · auth token · ShengdongdeMacBook- │
+│                 │ Pro.local (192.168.1.100) app 2026.2.26 macos 14.5                                                │
+│ Gateway service │ LaunchAgent installed · loaded · running (pid 3998)                                               │
+│ Node service    │ LaunchAgent not installed                                                                         │
+│ Agents          │ 7 · 1 bootstrap file present · sessions 130 · default main active 9m ago                          │
+│ Memory          │ 0 files · 0 chunks · sources memory · plugin memory-core · vector ready · fts unavailable ·       │
+│                 │ cache on (331)                                                                                    │
+│ Probes          │ skipped (use --deep)                                                                              │
+│ Events          │ none                                                                                              │
+│ Heartbeat       │ 10m (main), 20m (backlink), 20m (coding), 20m (growth), 20m (operations), 20m (product), 20m      │
+│                 │ (research)                                                                                        │
+│ Sessions        │ 130 active · default gpt-5.3-codex (272k ctx) · 7 stores                                          │
+└─────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Security audit
+Summary: 7 critical · 2 warn · 1 info
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.default.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.default.allowFrom includes "*".
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.backlink.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.backlink.allowFrom includes "*".
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.coding.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.coding.allowFrom includes "*".
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.growth.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.growth.allowFrom includes "*".
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.operations.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.operations.allowFrom includes "*".
+  CRITICAL Telegram DMs are open
+    channels.telegram.accounts.product.dmPolicy="open" allows anyone to DM the bot.
+    Fix: Use pairing/allowlist; if you really need open DMs, ensure channels.telegram.accounts.product.allowFrom includes "*".
+… +3 more
+Full report: openclaw security audit
+Deep probe: openclaw security audit --deep
+
+Channels
+┌──────────┬─────────┬────────┬───────────────────────────────────────────────────────────────────────────────────────┐
+│ Channel  │ Enabled │ State  │ Detail                                                                                │
+├──────────┼─────────┼────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+│ Telegram │ ON      │ OK     │ token config×7 (7847…FfNk · len 46) · accounts 7/7                                    │
+│ Feishu   │ OFF     │ OFF    │ disabled                                                                              │
+└──────────┴─────────┴────────┴───────────────────────────────────────────────────────────────────────────────────────┘
+
+Sessions
+┌────────────────────────────────────────────────┬────────┬─────────┬───────────────┬─────────────────────────────────┐
+│ Key                                            │ Kind   │ Age     │ Model         │ Tokens                          │
+├────────────────────────────────────────────────┼────────┼─────────┼───────────────┼─────────────────────────────────┤
+│ agent:main:main                                │ direct │ 9m ago  │ gpt-5.3-codex │ 90k/272k (33%) · 🗄️ 100% cached │
+│ agent:operations:cron:3ccdccbd-…               │ direct │ 13m ago │ gpt-5.3-codex │ unknown/272k (?%)               │
+│ agent:operations:cron:3ccdccbd-…               │ direct │ 13m ago │ gpt-5.3-codex │ unknown/272k (?%)               │
+│ agent:main:cron:d4fe69e5-ec48-4…               │ direct │ 18m ago │ gpt-5.3-codex │ 26k/272k (10%) · 🗄️ 729% cached │
+│ agent:main:cron:d4fe69e5-ec48-4…               │ direct │ 18m ago │ gpt-5.3-codex │ 26k/272k (10%) · 🗄️ 729% cached │
+│ agent:growth:main                              │ direct │ 24m ago │ kimi-k2.5     │ 39k/200k (20%)                  │
+│ agent:product:main                             │ direct │ 26m ago │ kimi-k2.5     │ 33k/200k (17%)                  │
+│ agent:research:main                            │ direct │ 26m ago │ kimi-k2.5     │ 27k/200k (13%)                  │
+│ agent:main:telegram:backlink:di…               │ direct │ 47m ago │ gpt-5.3-codex │ 28k/272k (10%) · 🗄️ 9% cached   │
+│ agent:main:cron:d4fe69e5-ec48-4…               │ direct │ 48m ago │ gpt-5.3-codex │ 26k/272k (10%) · 🗄️ 729% cached │
+└────────────────────────────────────────────────┴────────┴─────────┴───────────────┴─────────────────────────────────┘
+
+FAQ: https://docs.openclaw.ai/faq
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+
+Next steps:
+  Need to share?      openclaw status --all
+  Need to debug live? openclaw logs --follow
+  Need to test channels? openclaw status --deep
+RC: 0
+
+===== cron_list =====
+CMD: openclaw cron list
+ID                                   Name                     Schedule                         Next       Last       Status    Target    Agent     
+d4fe69e5-ec48-47b6-bfb7-443ce15dd9d1 X新词监控-v2                 every 30m                        18m ago    48m ago    ok        isolated  default
+3ccdccbd-3665-4889-8822-baf4d3e8e494 AI工具新品监控                 cron 0 10 * * * @ Asia/Shangh... 14m ago    -          running   isolated  operations
+504f90f5-3cb0-4694-bc67-01ecdf3ce546 Twitter热点监控              cron 0 */2 * * * (stagger 5m)    13m ago    2h ago     error     isolated  operations
+43131a74-20b8-4bec-8e51-9306a7d3bf47 网站数据分析日报                 cron 0 11 * * * @ Asia/Shangh... in 46m     -          idle      isolated  growth
+b459695a-3434-499e-b170-7793f0f19fc5 GitHubTrending监控         cron 0 11 * * * (exact)          in 46m     -          idle      isolated  operations
+4f2ff566-6124-453f-8697-5bd1860b05bc 社媒热点聚合                   cron 0 12 * * * @ Asia/Shangh... in 2h      -          idle      isolated  operations
+afbe78a9-8ecb-4071-a0ba-a51de42c709a 飞书外链监控                   cron 0 */4 * * * @ Asia/Shang... in 2h      2h ago     ok        isolated  default
+4d59881f-c0c4-4b5c-878b-0a31653db2c0 外链状态日报                   cron 0 14 * * * @ Asia/Shangh... in 4h      -          idle      isolated  backlink
+aef59f9a-d97e-4808-9ce6-733cd50a2f8c 内容平台热点监控                 cron 0 14 * * * @ Asia/Shangh... in 4h      1d ago     ok        isolated  operations
+8bef327c-5d1f-43a7-9ef2-e515951e93fa 产品需求池巡检                  cron 0 15 * * * @ Asia/Shangh... in 5h      -          idle      isolated  product
+0632024c-0ae9-4d21-a91c-3acd2bbc2273 技术巡检日报                   cron 0 16 * * * @ Asia/Shangh... in 6h      -          idle      isolated  coding
+6f54704c-9dc5-4786-970b-aca849a9dd23 竞品动态速报                   cron 0 16 * * * @ Asia/Shangh... in 6h      -          idle      isolated  operations
+20170595-6df4-484b-9b63-181c1f658c56 Agents健康巡检               cron 0 20 * * * @ Asia/Shangh... in 10h     -          idle      isolated  operations
+135aefb3-30a3-43d3-8c6b-0dba6c2d1e90 行业动态日报                   cron 0 9 * * * @ Asia/Shangha... in 23h     1h ago     error     isolated  research
+169828ce-4041-4a18-abde-3465f414e978 ProductHunt新品监控          cron 0 9 * * * (exact)           in 23h     1h ago     error     isolated  operations
+ad9fc897-0bda-4f33-8fcb-1a0055b0366f 竞品调研日报                   cron 0 9 * * * @ Asia/Shangha... in 23h     1h ago     ok        isolated  default
+26b4b353-57c2-44f3-8bb0-c53bbc04e493 安全检查周报                   cron 0 10 * * 1 @ Asia/Shangh... in 2d      -          idle      isolated  default
+36b14940-66dc-4839-ae79-f47862fd04de SEO/GEO趋势周报              cron 0 11 * * 1 @ Asia/Shangh... in 2d      -          idle      isolated  operations
+ad114bb4-db5b-47ce-a340-bba4dded19b6 增长实验周报                   cron 0 17 * * 5 @ Asia/Shangh... in 6d      -          idle      isolated  growth
+27dab393-eda3-447e-9815-292b6cdc5077 知识库周汇总                   cron 0 18 * * 5 @ Asia/Shangh... in 6d      16h ago    ok        isolated  default
+RC: 0
+
+===== models_main =====
+CMD: openclaw models status --agent main --json
+{
+  "configPath": "/Users/shengdongyang/.openclaw/openclaw.json",
+  "agentId": "main",
+  "agentDir": "/Users/shengdongyang/.openclaw/agents/main/agent",
+  "defaultModel": "openai-codex/gpt-5.3-codex",
+  "resolvedDefault": "openai-codex/gpt-5.3-codex",
+  "fallbacks": [
+    "codesome/claude-opus-4-6-20250219",
+    "bailian/kimi-k2.5"
+  ],
+  "imageModel": "bailian/qwen-vl-max",
+  "imageFallbacks": [
+    "bailian/qwen-vl-plus"
+  ],
+  "modelConfig": {
+    "defaultSource": "agent",
+    "fallbacksSource": "agent"
+  },
+  "aliases": {},
+  "allowed": [
+    "codesome/claude-sonnet-4-5-20251022",
+    "moonshot/moonshot-v1-128k",
+    "friend/claude-sonnet-4-5-20251022",
+    "kimi/kimi-for-coding",
+    "zhipu-anthropic/claude-sonnet-4-5-20251022",
+    "moonshot/kimi-k2-0905-preview",
+    "bailian/qwen3.5-plus",
+    "bailian/qwen3-max-2026-01-23",
+    "bailian/qwen3-coder-next",
+    "bailian/qwen3-coder-plus",
+    "bailian/glm-5",
+    "bailian/glm-4.7",
+    "bailian/kimi-k2.5",
+    "bailian/MiniMax-M2.5",
+    "bailian-anthropic/qwen3-coder-plus",
+    "codesome/gpt5.3codex",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "auth": {
+    "storePath": "/Users/shengdongyang/.openclaw/agents/main/agent/auth-profiles.json",
+    "shellEnvFallback": {
+      "enabled": false,
+      "appliedKeys": []
+    },
+    "providersWithOAuth": [
+      "openai-codex (1)"
+    ],
+    "missingProvidersInUse": [],
+    "providers": [
+      {
+        "provider": "anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "env": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "env: ANTHROPIC_API_KEY"
+        }
+      },
+      {
+        "provider": "bailian",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "bailian-anthropic",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "codesome",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "codesome:default=sk-0762c...09613b03"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-0762c...09613b03",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "friend",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "friend:default=cr_56ad7...cec98f01"
+          ]
+        },
+        "modelsJson": {
+          "value": "cr_56ad7...cec98f01",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "kimi",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "kimi:default=sk-kimi-...mMPcM7we"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-kimi-...mMPcM7we",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "moonshot",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "moonshot:default=sk-5h1Cu...LLQ4hRKx"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-5h1Cu...LLQ4hRKx",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "openai-codex",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 1,
+          "token": 0,
+          "apiKey": 0,
+          "labels": [
+            "openai-codex:default=OAuth"
+          ]
+        }
+      },
+      {
+        "provider": "zhipu",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      },
+      {
+        "provider": "zhipu-anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu-anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/main/agent/models.json"
+        }
+      }
+    ],
+    "unusableProfiles": [],
+    "oauth": {
+      "warnAfterMs": 86400000,
+      "profiles": [
+        {
+          "profileId": "anthropic:default",
+          "provider": "anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "anthropic:default"
+        },
+        {
+          "profileId": "codesome:default",
+          "provider": "codesome",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "codesome:default"
+        },
+        {
+          "profileId": "friend:default",
+          "provider": "friend",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "friend:default"
+        },
+        {
+          "profileId": "kimi:default",
+          "provider": "kimi",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "kimi:default"
+        },
+        {
+          "profileId": "moonshot:default",
+          "provider": "moonshot",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "moonshot:default"
+        },
+        {
+          "profileId": "openai-codex:default",
+          "provider": "openai-codex",
+          "type": "oauth",
+          "status": "ok",
+          "expiresAt": 1772868410000,
+          "remainingMs": 623554781,
+          "source": "store",
+          "label": "openai-codex:default"
+        },
+        {
+          "profileId": "zhipu:default",
+          "provider": "zhipu",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu:default"
+        },
+        {
+          "profileId": "zhipu-anthropic:default",
+          "provider": "zhipu-anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu-anthropic:default"
+        }
+      ],
+      "providers": [
+        {
+          "provider": "anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "anthropic:default",
+              "provider": "anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "anthropic:default"
+            }
+          ]
+        },
+        {
+          "provider": "bailian",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "bailian-anthropic",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "codesome",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "codesome:default",
+              "provider": "codesome",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "codesome:default"
+            }
+          ]
+        },
+        {
+          "provider": "friend",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "friend:default",
+              "provider": "friend",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "friend:default"
+            }
+          ]
+        },
+        {
+          "provider": "kimi",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "kimi:default",
+              "provider": "kimi",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "kimi:default"
+            }
+          ]
+        },
+        {
+          "provider": "moonshot",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "moonshot:default",
+              "provider": "moonshot",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "moonshot:default"
+            }
+          ]
+        },
+        {
+          "provider": "openai-codex",
+          "status": "ok",
+          "profiles": [
+            {
+              "profileId": "openai-codex:default",
+              "provider": "openai-codex",
+              "type": "oauth",
+              "status": "ok",
+              "expiresAt": 1772868410000,
+              "remainingMs": 623554781,
+              "source": "store",
+              "label": "openai-codex:default"
+            }
+          ],
+          "expiresAt": 1772868410000,
+          "remainingMs": 623554781
+        },
+        {
+          "provider": "xai",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "zhipu",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu:default",
+              "provider": "zhipu",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu:default"
+            }
+          ]
+        },
+        {
+          "provider": "zhipu-anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu-anthropic:default",
+              "provider": "zhipu-anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu-anthropic:default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+RC: 0
+
+===== models_coding =====
+CMD: openclaw models status --agent coding --json
+{
+  "configPath": "/Users/shengdongyang/.openclaw/openclaw.json",
+  "agentId": "coding",
+  "agentDir": "/Users/shengdongyang/.openclaw/agents/coding/agent",
+  "defaultModel": "openai-codex/gpt-5.3-codex",
+  "resolvedDefault": "openai-codex/gpt-5.3-codex",
+  "fallbacks": [
+    "codesome/claude-opus-4-6-20250219",
+    "bailian/kimi-k2.5"
+  ],
+  "imageModel": "bailian/qwen-vl-max",
+  "imageFallbacks": [
+    "bailian/qwen-vl-plus"
+  ],
+  "modelConfig": {
+    "defaultSource": "agent",
+    "fallbacksSource": "agent"
+  },
+  "aliases": {},
+  "allowed": [
+    "codesome/claude-sonnet-4-5-20251022",
+    "moonshot/moonshot-v1-128k",
+    "friend/claude-sonnet-4-5-20251022",
+    "kimi/kimi-for-coding",
+    "zhipu-anthropic/claude-sonnet-4-5-20251022",
+    "moonshot/kimi-k2-0905-preview",
+    "bailian/qwen3.5-plus",
+    "bailian/qwen3-max-2026-01-23",
+    "bailian/qwen3-coder-next",
+    "bailian/qwen3-coder-plus",
+    "bailian/glm-5",
+    "bailian/glm-4.7",
+    "bailian/kimi-k2.5",
+    "bailian/MiniMax-M2.5",
+    "bailian-anthropic/qwen3-coder-plus",
+    "codesome/gpt5.3codex",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "auth": {
+    "storePath": "/Users/shengdongyang/.openclaw/agents/coding/agent/auth-profiles.json",
+    "shellEnvFallback": {
+      "enabled": false,
+      "appliedKeys": []
+    },
+    "providersWithOAuth": [
+      "openai-codex (1)"
+    ],
+    "missingProvidersInUse": [],
+    "providers": [
+      {
+        "provider": "anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "env": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "env: ANTHROPIC_API_KEY"
+        }
+      },
+      {
+        "provider": "bailian",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "bailian-anthropic",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "codesome",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "codesome:default=sk-0762c...09613b03"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-0762c...09613b03",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "friend",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "friend:default=cr_56ad7...cec98f01"
+          ]
+        },
+        "modelsJson": {
+          "value": "cr_56ad7...cec98f01",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "kimi",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "kimi:default=sk-kimi-...mMPcM7we"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-kimi-...mMPcM7we",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "moonshot",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "moonshot:default=sk-5h1Cu...LLQ4hRKx"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-5h1Cu...LLQ4hRKx",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "openai-codex",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 1,
+          "token": 0,
+          "apiKey": 0,
+          "labels": [
+            "openai-codex:default=OAuth"
+          ]
+        }
+      },
+      {
+        "provider": "zhipu",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      },
+      {
+        "provider": "zhipu-anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu-anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/coding/agent/models.json"
+        }
+      }
+    ],
+    "unusableProfiles": [],
+    "oauth": {
+      "warnAfterMs": 86400000,
+      "profiles": [
+        {
+          "profileId": "anthropic:default",
+          "provider": "anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "anthropic:default"
+        },
+        {
+          "profileId": "codesome:default",
+          "provider": "codesome",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "codesome:default"
+        },
+        {
+          "profileId": "friend:default",
+          "provider": "friend",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "friend:default"
+        },
+        {
+          "profileId": "kimi:default",
+          "provider": "kimi",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "kimi:default"
+        },
+        {
+          "profileId": "moonshot:default",
+          "provider": "moonshot",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "moonshot:default"
+        },
+        {
+          "profileId": "openai-codex:default",
+          "provider": "openai-codex",
+          "type": "oauth",
+          "status": "ok",
+          "expiresAt": 1772868410000,
+          "remainingMs": 623553845,
+          "source": "store",
+          "label": "openai-codex:default"
+        },
+        {
+          "profileId": "zhipu:default",
+          "provider": "zhipu",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu:default"
+        },
+        {
+          "profileId": "zhipu-anthropic:default",
+          "provider": "zhipu-anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu-anthropic:default"
+        }
+      ],
+      "providers": [
+        {
+          "provider": "anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "anthropic:default",
+              "provider": "anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "anthropic:default"
+            }
+          ]
+        },
+        {
+          "provider": "bailian",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "bailian-anthropic",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "codesome",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "codesome:default",
+              "provider": "codesome",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "codesome:default"
+            }
+          ]
+        },
+        {
+          "provider": "friend",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "friend:default",
+              "provider": "friend",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "friend:default"
+            }
+          ]
+        },
+        {
+          "provider": "kimi",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "kimi:default",
+              "provider": "kimi",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "kimi:default"
+            }
+          ]
+        },
+        {
+          "provider": "moonshot",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "moonshot:default",
+              "provider": "moonshot",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "moonshot:default"
+            }
+          ]
+        },
+        {
+          "provider": "openai-codex",
+          "status": "ok",
+          "profiles": [
+            {
+              "profileId": "openai-codex:default",
+              "provider": "openai-codex",
+              "type": "oauth",
+              "status": "ok",
+              "expiresAt": 1772868410000,
+              "remainingMs": 623553845,
+              "source": "store",
+              "label": "openai-codex:default"
+            }
+          ],
+          "expiresAt": 1772868410000,
+          "remainingMs": 623553845
+        },
+        {
+          "provider": "xai",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "zhipu",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu:default",
+              "provider": "zhipu",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu:default"
+            }
+          ]
+        },
+        {
+          "provider": "zhipu-anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu-anthropic:default",
+              "provider": "zhipu-anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu-anthropic:default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+RC: 0
+
+===== models_operations =====
+CMD: openclaw models status --agent operations --json
+{
+  "configPath": "/Users/shengdongyang/.openclaw/openclaw.json",
+  "agentId": "operations",
+  "agentDir": "/Users/shengdongyang/.openclaw/agents/operations/agent",
+  "defaultModel": "bailian/kimi-k2.5",
+  "resolvedDefault": "bailian/kimi-k2.5",
+  "fallbacks": [
+    "codesome/claude-opus-4-6-20250219",
+    "bailian/kimi-k2.5"
+  ],
+  "imageModel": "bailian/qwen-vl-max",
+  "imageFallbacks": [
+    "bailian/qwen-vl-plus"
+  ],
+  "modelConfig": {
+    "defaultSource": "agent",
+    "fallbacksSource": "defaults"
+  },
+  "aliases": {},
+  "allowed": [
+    "codesome/claude-sonnet-4-5-20251022",
+    "moonshot/moonshot-v1-128k",
+    "friend/claude-sonnet-4-5-20251022",
+    "kimi/kimi-for-coding",
+    "zhipu-anthropic/claude-sonnet-4-5-20251022",
+    "moonshot/kimi-k2-0905-preview",
+    "bailian/qwen3.5-plus",
+    "bailian/qwen3-max-2026-01-23",
+    "bailian/qwen3-coder-next",
+    "bailian/qwen3-coder-plus",
+    "bailian/glm-5",
+    "bailian/glm-4.7",
+    "bailian/kimi-k2.5",
+    "bailian/MiniMax-M2.5",
+    "bailian-anthropic/qwen3-coder-plus",
+    "codesome/gpt5.3codex",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "auth": {
+    "storePath": "/Users/shengdongyang/.openclaw/agents/operations/agent/auth-profiles.json",
+    "shellEnvFallback": {
+      "enabled": false,
+      "appliedKeys": []
+    },
+    "providersWithOAuth": [
+      "openai-codex (1)"
+    ],
+    "missingProvidersInUse": [],
+    "providers": [
+      {
+        "provider": "anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "env": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "env: ANTHROPIC_API_KEY"
+        }
+      },
+      {
+        "provider": "bailian",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "bailian-anthropic",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "codesome",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "codesome:default=sk-0762c...09613b03"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-0762c...09613b03",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "friend",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "friend:default=cr_56ad7...cec98f01"
+          ]
+        },
+        "modelsJson": {
+          "value": "cr_56ad7...cec98f01",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "kimi",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "kimi:default=sk-kimi-...mMPcM7we"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-kimi-...mMPcM7we",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "moonshot",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "moonshot:default=sk-5h1Cu...LLQ4hRKx"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-5h1Cu...LLQ4hRKx",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "openai-codex",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 1,
+          "token": 0,
+          "apiKey": 0,
+          "labels": [
+            "openai-codex:default=OAuth"
+          ]
+        }
+      },
+      {
+        "provider": "zhipu",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      },
+      {
+        "provider": "zhipu-anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu-anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/operations/agent/models.json"
+        }
+      }
+    ],
+    "unusableProfiles": [],
+    "oauth": {
+      "warnAfterMs": 86400000,
+      "profiles": [
+        {
+          "profileId": "anthropic:default",
+          "provider": "anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "anthropic:default"
+        },
+        {
+          "profileId": "codesome:default",
+          "provider": "codesome",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "codesome:default"
+        },
+        {
+          "profileId": "friend:default",
+          "provider": "friend",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "friend:default"
+        },
+        {
+          "profileId": "kimi:default",
+          "provider": "kimi",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "kimi:default"
+        },
+        {
+          "profileId": "moonshot:default",
+          "provider": "moonshot",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "moonshot:default"
+        },
+        {
+          "profileId": "openai-codex:default",
+          "provider": "openai-codex",
+          "type": "oauth",
+          "status": "ok",
+          "expiresAt": 1772868410000,
+          "remainingMs": 623552915,
+          "source": "store",
+          "label": "openai-codex:default"
+        },
+        {
+          "profileId": "zhipu:default",
+          "provider": "zhipu",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu:default"
+        },
+        {
+          "profileId": "zhipu-anthropic:default",
+          "provider": "zhipu-anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu-anthropic:default"
+        }
+      ],
+      "providers": [
+        {
+          "provider": "anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "anthropic:default",
+              "provider": "anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "anthropic:default"
+            }
+          ]
+        },
+        {
+          "provider": "bailian",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "bailian-anthropic",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "codesome",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "codesome:default",
+              "provider": "codesome",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "codesome:default"
+            }
+          ]
+        },
+        {
+          "provider": "friend",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "friend:default",
+              "provider": "friend",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "friend:default"
+            }
+          ]
+        },
+        {
+          "provider": "kimi",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "kimi:default",
+              "provider": "kimi",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "kimi:default"
+            }
+          ]
+        },
+        {
+          "provider": "moonshot",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "moonshot:default",
+              "provider": "moonshot",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "moonshot:default"
+            }
+          ]
+        },
+        {
+          "provider": "openai-codex",
+          "status": "ok",
+          "profiles": [
+            {
+              "profileId": "openai-codex:default",
+              "provider": "openai-codex",
+              "type": "oauth",
+              "status": "ok",
+              "expiresAt": 1772868410000,
+              "remainingMs": 623552915,
+              "source": "store",
+              "label": "openai-codex:default"
+            }
+          ],
+          "expiresAt": 1772868410000,
+          "remainingMs": 623552915
+        },
+        {
+          "provider": "xai",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "zhipu",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu:default",
+              "provider": "zhipu",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu:default"
+            }
+          ]
+        },
+        {
+          "provider": "zhipu-anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu-anthropic:default",
+              "provider": "zhipu-anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu-anthropic:default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+RC: 0
+
+===== models_product =====
+CMD: openclaw models status --agent product --json
+{
+  "configPath": "/Users/shengdongyang/.openclaw/openclaw.json",
+  "agentId": "product",
+  "agentDir": "/Users/shengdongyang/.openclaw/agents/product/agent",
+  "defaultModel": "bailian/kimi-k2.5",
+  "resolvedDefault": "bailian/kimi-k2.5",
+  "fallbacks": [
+    "codesome/claude-opus-4-6-20250219",
+    "bailian/kimi-k2.5"
+  ],
+  "imageModel": "bailian/qwen-vl-max",
+  "imageFallbacks": [
+    "bailian/qwen-vl-plus"
+  ],
+  "modelConfig": {
+    "defaultSource": "agent",
+    "fallbacksSource": "defaults"
+  },
+  "aliases": {},
+  "allowed": [
+    "codesome/claude-sonnet-4-5-20251022",
+    "moonshot/moonshot-v1-128k",
+    "friend/claude-sonnet-4-5-20251022",
+    "kimi/kimi-for-coding",
+    "zhipu-anthropic/claude-sonnet-4-5-20251022",
+    "moonshot/kimi-k2-0905-preview",
+    "bailian/qwen3.5-plus",
+    "bailian/qwen3-max-2026-01-23",
+    "bailian/qwen3-coder-next",
+    "bailian/qwen3-coder-plus",
+    "bailian/glm-5",
+    "bailian/glm-4.7",
+    "bailian/kimi-k2.5",
+    "bailian/MiniMax-M2.5",
+    "bailian-anthropic/qwen3-coder-plus",
+    "codesome/gpt5.3codex",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "auth": {
+    "storePath": "/Users/shengdongyang/.openclaw/agents/product/agent/auth-profiles.json",
+    "shellEnvFallback": {
+      "enabled": false,
+      "appliedKeys": []
+    },
+    "providersWithOAuth": [
+      "openai-codex (1)"
+    ],
+    "missingProvidersInUse": [],
+    "providers": [
+      {
+        "provider": "anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "env": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "env: ANTHROPIC_API_KEY"
+        }
+      },
+      {
+        "provider": "bailian",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "bailian-anthropic",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "codesome",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "codesome:default=sk-0762c...09613b03"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-0762c...09613b03",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "friend",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "friend:default=cr_56ad7...cec98f01"
+          ]
+        },
+        "modelsJson": {
+          "value": "cr_56ad7...cec98f01",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "kimi",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "kimi:default=sk-kimi-...mMPcM7we"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-kimi-...mMPcM7we",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "moonshot",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "moonshot:default=sk-5h1Cu...LLQ4hRKx"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-5h1Cu...LLQ4hRKx",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "openai-codex",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 1,
+          "token": 0,
+          "apiKey": 0,
+          "labels": [
+            "openai-codex:default=OAuth"
+          ]
+        }
+      },
+      {
+        "provider": "zhipu",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      },
+      {
+        "provider": "zhipu-anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu-anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/product/agent/models.json"
+        }
+      }
+    ],
+    "unusableProfiles": [],
+    "oauth": {
+      "warnAfterMs": 86400000,
+      "profiles": [
+        {
+          "profileId": "anthropic:default",
+          "provider": "anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "anthropic:default"
+        },
+        {
+          "profileId": "codesome:default",
+          "provider": "codesome",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "codesome:default"
+        },
+        {
+          "profileId": "friend:default",
+          "provider": "friend",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "friend:default"
+        },
+        {
+          "profileId": "kimi:default",
+          "provider": "kimi",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "kimi:default"
+        },
+        {
+          "profileId": "moonshot:default",
+          "provider": "moonshot",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "moonshot:default"
+        },
+        {
+          "profileId": "openai-codex:default",
+          "provider": "openai-codex",
+          "type": "oauth",
+          "status": "ok",
+          "expiresAt": 1772868410000,
+          "remainingMs": 623551998,
+          "source": "store",
+          "label": "openai-codex:default"
+        },
+        {
+          "profileId": "zhipu:default",
+          "provider": "zhipu",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu:default"
+        },
+        {
+          "profileId": "zhipu-anthropic:default",
+          "provider": "zhipu-anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu-anthropic:default"
+        }
+      ],
+      "providers": [
+        {
+          "provider": "anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "anthropic:default",
+              "provider": "anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "anthropic:default"
+            }
+          ]
+        },
+        {
+          "provider": "bailian",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "bailian-anthropic",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "codesome",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "codesome:default",
+              "provider": "codesome",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "codesome:default"
+            }
+          ]
+        },
+        {
+          "provider": "friend",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "friend:default",
+              "provider": "friend",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "friend:default"
+            }
+          ]
+        },
+        {
+          "provider": "kimi",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "kimi:default",
+              "provider": "kimi",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "kimi:default"
+            }
+          ]
+        },
+        {
+          "provider": "moonshot",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "moonshot:default",
+              "provider": "moonshot",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "moonshot:default"
+            }
+          ]
+        },
+        {
+          "provider": "openai-codex",
+          "status": "ok",
+          "profiles": [
+            {
+              "profileId": "openai-codex:default",
+              "provider": "openai-codex",
+              "type": "oauth",
+              "status": "ok",
+              "expiresAt": 1772868410000,
+              "remainingMs": 623551998,
+              "source": "store",
+              "label": "openai-codex:default"
+            }
+          ],
+          "expiresAt": 1772868410000,
+          "remainingMs": 623551998
+        },
+        {
+          "provider": "xai",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "zhipu",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu:default",
+              "provider": "zhipu",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu:default"
+            }
+          ]
+        },
+        {
+          "provider": "zhipu-anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu-anthropic:default",
+              "provider": "zhipu-anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu-anthropic:default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+RC: 0
+
+===== models_backlink =====
+CMD: openclaw models status --agent backlink --json
+{
+  "configPath": "/Users/shengdongyang/.openclaw/openclaw.json",
+  "agentId": "backlink",
+  "agentDir": "/Users/shengdongyang/.openclaw/agents/backlink/agent",
+  "defaultModel": "bailian/kimi-k2.5",
+  "resolvedDefault": "bailian/kimi-k2.5",
+  "fallbacks": [
+    "codesome/claude-opus-4-6-20250219",
+    "bailian/kimi-k2.5"
+  ],
+  "imageModel": "bailian/qwen-vl-max",
+  "imageFallbacks": [
+    "bailian/qwen-vl-plus"
+  ],
+  "modelConfig": {
+    "defaultSource": "agent",
+    "fallbacksSource": "defaults"
+  },
+  "aliases": {},
+  "allowed": [
+    "codesome/claude-sonnet-4-5-20251022",
+    "moonshot/moonshot-v1-128k",
+    "friend/claude-sonnet-4-5-20251022",
+    "kimi/kimi-for-coding",
+    "zhipu-anthropic/claude-sonnet-4-5-20251022",
+    "moonshot/kimi-k2-0905-preview",
+    "bailian/qwen3.5-plus",
+    "bailian/qwen3-max-2026-01-23",
+    "bailian/qwen3-coder-next",
+    "bailian/qwen3-coder-plus",
+    "bailian/glm-5",
+    "bailian/glm-4.7",
+    "bailian/kimi-k2.5",
+    "bailian/MiniMax-M2.5",
+    "bailian-anthropic/qwen3-coder-plus",
+    "codesome/gpt5.3codex",
+    "openai-codex/gpt-5.3-codex"
+  ],
+  "auth": {
+    "storePath": "/Users/shengdongyang/.openclaw/agents/backlink/agent/auth-profiles.json",
+    "shellEnvFallback": {
+      "enabled": false,
+      "appliedKeys": []
+    },
+    "providersWithOAuth": [
+      "openai-codex (1)"
+    ],
+    "missingProvidersInUse": [],
+    "providers": [
+      {
+        "provider": "anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "env": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "env: ANTHROPIC_API_KEY"
+        }
+      },
+      {
+        "provider": "bailian",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "bailian-anthropic",
+        "effective": {
+          "kind": "models.json",
+          "detail": "sk-sp-dd...5dbf7619"
+        },
+        "profiles": {
+          "count": 0,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 0,
+          "labels": []
+        },
+        "modelsJson": {
+          "value": "sk-sp-dd...5dbf7619",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "codesome",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "codesome:default=sk-0762c...09613b03"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-0762c...09613b03",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "friend",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "friend:default=cr_56ad7...cec98f01"
+          ]
+        },
+        "modelsJson": {
+          "value": "cr_56ad7...cec98f01",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "kimi",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "kimi:default=sk-kimi-...mMPcM7we"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-kimi-...mMPcM7we",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "moonshot",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "moonshot:default=sk-5h1Cu...LLQ4hRKx"
+          ]
+        },
+        "modelsJson": {
+          "value": "sk-5h1Cu...LLQ4hRKx",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "openai-codex",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 1,
+          "token": 0,
+          "apiKey": 0,
+          "labels": [
+            "openai-codex:default=OAuth"
+          ]
+        }
+      },
+      {
+        "provider": "zhipu",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      },
+      {
+        "provider": "zhipu-anthropic",
+        "effective": {
+          "kind": "profiles",
+          "detail": "~/.openclaw/agents/main/agent/auth-profiles.json"
+        },
+        "profiles": {
+          "count": 1,
+          "oauth": 0,
+          "token": 0,
+          "apiKey": 1,
+          "labels": [
+            "zhipu-anthropic:default=147061d2...nQQsjvjb"
+          ]
+        },
+        "modelsJson": {
+          "value": "147061d2...nQQsjvjb",
+          "source": "models.json: ~/.openclaw/agents/backlink/agent/models.json"
+        }
+      }
+    ],
+    "unusableProfiles": [],
+    "oauth": {
+      "warnAfterMs": 86400000,
+      "profiles": [
+        {
+          "profileId": "anthropic:default",
+          "provider": "anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "anthropic:default"
+        },
+        {
+          "profileId": "codesome:default",
+          "provider": "codesome",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "codesome:default"
+        },
+        {
+          "profileId": "friend:default",
+          "provider": "friend",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "friend:default"
+        },
+        {
+          "profileId": "kimi:default",
+          "provider": "kimi",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "kimi:default"
+        },
+        {
+          "profileId": "moonshot:default",
+          "provider": "moonshot",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "moonshot:default"
+        },
+        {
+          "profileId": "openai-codex:default",
+          "provider": "openai-codex",
+          "type": "oauth",
+          "status": "ok",
+          "expiresAt": 1772868410000,
+          "remainingMs": 623551006,
+          "source": "store",
+          "label": "openai-codex:default"
+        },
+        {
+          "profileId": "zhipu:default",
+          "provider": "zhipu",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu:default"
+        },
+        {
+          "profileId": "zhipu-anthropic:default",
+          "provider": "zhipu-anthropic",
+          "type": "api_key",
+          "status": "static",
+          "source": "store",
+          "label": "zhipu-anthropic:default"
+        }
+      ],
+      "providers": [
+        {
+          "provider": "anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "anthropic:default",
+              "provider": "anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "anthropic:default"
+            }
+          ]
+        },
+        {
+          "provider": "bailian",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "bailian-anthropic",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "codesome",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "codesome:default",
+              "provider": "codesome",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "codesome:default"
+            }
+          ]
+        },
+        {
+          "provider": "friend",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "friend:default",
+              "provider": "friend",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "friend:default"
+            }
+          ]
+        },
+        {
+          "provider": "kimi",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "kimi:default",
+              "provider": "kimi",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "kimi:default"
+            }
+          ]
+        },
+        {
+          "provider": "moonshot",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "moonshot:default",
+              "provider": "moonshot",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "moonshot:default"
+            }
+          ]
+        },
+        {
+          "provider": "openai-codex",
+          "status": "ok",
+          "profiles": [
+            {
+              "profileId": "openai-codex:default",
+              "provider": "openai-codex",
+              "type": "oauth",
+              "status": "ok",
+              "expiresAt": 1772868410000,
+              "remainingMs": 623551006,
+              "source": "store",
+              "label": "openai-codex:default"
+            }
+          ],
+          "expiresAt": 1772868410000,
+          "remainingMs": 623551006
+        },
+        {
+          "provider": "xai",
+          "status": "missing",
+          "profiles": []
+        },
+        {
+          "provider": "zhipu",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu:default",
+              "provider": "zhipu",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu:default"
+            }
+          ]
+        },
+        {
+          "provider": "zhipu-anthropic",
+          "status": "static",
+          "profiles": [
+            {
+              "profileId": "zhipu-anthropic:default",
+              "provider": "zhipu-anthropic",
+              "type": "api_key",
+              "status": "static",
+              "source": "store",
+              "label": "zhipu-anthropic:default"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+RC: 0

@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenClaw Ops Guardrails"
+  short_description: "Run endpoint checks, safe model-switch validation, and context cleanup guardrails."
+  default_prompt: "Use $openclaw-ops-guardrails to run a full preflight and show what must be fixed before switching providers."

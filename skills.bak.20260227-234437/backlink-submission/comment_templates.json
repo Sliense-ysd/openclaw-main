@@ -1,0 +1,34 @@
+{
+  "templates": [
+    "Great tool! Check out {product_url} for similar features.",
+    "Thanks for sharing! {product_url} might be helpful too.",
+    "Interesting post. You might also like {product_url}",
+    "Nice article! {product_url} offers similar solutions.",
+    "Good read! {product_url} has some related features.",
+    "Helpful content! {product_url} is worth checking out.",
+    "Love this! {product_url} has something similar.",
+    "Awesome post! You should try {product_url} as well."
+  ],
+  "authors": [
+    {
+      "name": "Alex Chen",
+      "email": "alex.chen@techmail.com"
+    },
+    {
+      "name": "Sarah Kim",
+      "email": "sarah.kim@webmail.com"
+    },
+    {
+      "name": "Mike Johnson",
+      "email": "mike.j@cloudmail.com"
+    },
+    {
+      "name": "Emma Davis",
+      "email": "emma.d@netmail.com"
+    },
+    {
+      "name": "Ryan Lee",
+      "email": "ryan.lee@devmail.com"
+    }
+  ]
+}

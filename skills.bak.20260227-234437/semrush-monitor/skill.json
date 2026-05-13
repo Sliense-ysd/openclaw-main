@@ -1,0 +1,26 @@
+{
+  "name": "semrush-monitor",
+  "version": "1.0.0",
+  "description": "Monitor backlink indexing status via Semrush and sync with Feishu Bitable. Extracts referring domains from Semrush, compares with submitted backlinks in Feishu, and moves indexed ones to the indexing stats table.",
+  "author": "rain",
+  "triggers": [
+    "semrush",
+    "外链收录",
+    "backlink indexing",
+    "收录检查"
+  ],
+  "tools": ["exec", "web_fetch"],
+  "env": {
+    "WORKSPACE_DIR": "/Users/rain/.openclaw/workspace",
+    "PROXY": "127.0.0.1:7897",
+    "BROWSER_PROFILE": "/Users/rain/.openclaw/workspace/browser-profiles/3ue",
+    "FEISHU_APP_ID": "cli_a9d5b655b4395cb1",
+    "FEISHU_APP_SECRET": "oQrYeVZJOOImjD04toiMVeLOtgNkXIUn",
+    "FEISHU_APP_TOKEN": "HLdCbJRr6a4dcXsvXBYcEfPXnlh"
+  },
+  "files": [
+    "README.md",
+    "scripts/semrush-extract-all-domains.mjs",
+    "scripts/move-backlinks.mjs"
+  ]
+}

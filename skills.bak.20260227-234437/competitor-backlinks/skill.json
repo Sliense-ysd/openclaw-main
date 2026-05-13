@@ -1,0 +1,27 @@
+{
+  "name": "competitor-backlinks",
+  "version": "1.0.0",
+  "description": "Scan competitor backlinks from Semrush and find new link opportunities. Extracts referring domains from 19 competitor sites and identifies domains we haven't covered yet.",
+  "author": "rain",
+  "triggers": [
+    "竞品外链",
+    "competitor backlinks",
+    "外链机会",
+    "link opportunities"
+  ],
+  "tools": ["exec"],
+  "env": {
+    "WORKSPACE_DIR": "/Users/rain/.openclaw/workspace",
+    "PROXY": "127.0.0.1:7897",
+    "BROWSER_PROFILE": "/Users/rain/.openclaw/workspace/browser-profiles/3ue",
+    "FEISHU_APP_ID": "cli_a9d5b655b4395cb1",
+    "FEISHU_APP_SECRET": "oQrYeVZJOOImjD04toiMVeLOtgNkXIUn",
+    "FEISHU_APP_TOKEN": "HLdCbJRr6a4dcXsvXBYcEfPXnlh"
+  },
+  "files": [
+    "README.md",
+    "scripts/semrush-extract-competitors.mjs",
+    "scripts/competitor-backlinks.mjs",
+    "competitors.txt"
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "scannedFiles": 200,
+  "filesWithSecrets": 20,
+  "findings": [
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/coding/sessions/34a0c247-b3ec-451b-ba5e-b242575a33b0.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 3,
+          "samples": [
+            "sk-076***3b03",
+            "sk-kim***M7we",
+            "sk-5h1***hRKx"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 1,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 2,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 7,
+          "samples": [
+            "852043***Hndk",
+            "850485***WAM4",
+            "861665***LiMo",
+            "863784***yyIc",
+            "861671***1AaM",
+            "784705***FfNk",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/coding/sessions/e5efa7fa-761a-4480-9792-7bb3de2fb69d.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 3,
+          "samples": [
+            "sk-076***3b03",
+            "sk-kim***M7we",
+            "sk-5h1***hRKx"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 1,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 2,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 14,
+          "samples": [
+            "852043***Hndk",
+            "850485***WAM4",
+            "861665***LiMo",
+            "863784***yyIc",
+            "861671***1AaM",
+            "784705***FfNk",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/00683228-75b3-4309-bee1-33178f43601d.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 3,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/14a1a7b8-d46d-4aca-9d4c-6d98782bff60.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 2,
+          "samples": [
+            "sk-tel***f523"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/207ddaee-82bb-4b68-830b-02dc68636dad.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 3,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/2620e5c4-1b53-4f6b-994d-ada6b1e87610.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 3,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/2db5bf86-dcbe-45f5-9acd-359fe42450f8.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 6,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/30eab6f7-c84a-47d3-a500-b6e4a631ee70.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 35,
+          "samples": [
+            "sk-076***3b03",
+            "sk-kim***M7we",
+            "sk-5h1***hRKx"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 11,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 21,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 113,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs",
+            "850485***WAM4",
+            "861665***LiMo",
+            "863784***yyIc",
+            "861671***1AaM",
+            "784705***FfNk",
+            "850485***8FC0"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/375ff6f0-a253-4972-b229-0bc816d62fd9.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 3,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/379b84d2-07fd-4b4b-9a16-ec19c686d43d.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 2,
+          "samples": [
+            "sk-tel***f523"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/4568150f-989e-4358-945e-71608992af9e.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 8,
+          "samples": [
+            "sk-kim***M7we",
+            "sk-kim***M7we"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 7,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 8,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 30,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/776b89bc-997e-4f61-98d8-76048a4a0563.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 2,
+          "samples": [
+            "sk-tel***f523"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/8b8185ab-0737-4f6e-8e48-75acfbaa2596.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 12,
+          "samples": [
+            "sk-tel***f523",
+            "sk-tel***2026",
+            "sk-tel***4676",
+            "sk-tel***odel",
+            "sk-tel***e7af"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/a909b4da-d81a-4ca1-8cd4-1bc8ecafcac2.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 4,
+          "samples": [
+            "sk-tel***f523"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/ccb0a909-0bca-46fc-b952-149ce6934dcd.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 2,
+          "samples": [
+            "sk-tel***f523"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/d6f2e775-61e7-411c-a53a-5af019a11cef.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 6,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/dbdbc80e-747b-4724-a91f-1270b7276beb.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 2,
+          "samples": [
+            "sk-kim***M7we"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 8,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 2,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 13,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/main/sessions/f6ef4ac2-8152-425f-95ce-7ae38a6571af.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 27,
+          "samples": [
+            "sk-cMp***EI1J",
+            "sk-b55***1bea",
+            "sk-FSe***x1DE",
+            "sk-Wzf***Jeze",
+            "sk-jjN***0olf",
+            "sk-076***3b03",
+            "sk-kim***M7we",
+            "sk-5h1***hRKx"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 5,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 17,
+          "samples": [
+            "a9e83f***PNdx",
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 79,
+          "samples": [
+            "852043***Hndk",
+            "851342***8FC0",
+            "830008***oUJs",
+            "850485***WAM4",
+            "861665***LiMo",
+            "863784***yyIc",
+            "861671***1AaM",
+            "784705***FfNk",
+            "863784***myIc"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/agents/product/sessions/5c138c65-fa27-4b04-a08f-5663f92d6969.jsonl",
+      "hitTypes": [
+        {
+          "type": "sk",
+          "count": 17,
+          "samples": [
+            "sk-076***3b03",
+            "sk-kim***M7we",
+            "sk-5h1***hRKx",
+            "sk-sp-***7619"
+          ]
+        },
+        {
+          "type": "cr",
+          "count": 3,
+          "samples": [
+            "cr_56a***8f01"
+          ]
+        },
+        {
+          "type": "zhipu",
+          "count": 6,
+          "samples": [
+            "147061***jvjb"
+          ]
+        },
+        {
+          "type": "telegram",
+          "count": 7,
+          "samples": [
+            "852043***Hndk",
+            "850485***WAM4",
+            "861665***LiMo",
+            "863784***yyIc",
+            "861671***1AaM",
+            "784705***FfNk",
+            "830008***oUJs"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/shengdongyang/.openclaw/logs/config-audit.jsonl",
+      "hitTypes": [
+        {
+          "type": "telegram",
+          "count": 1,
+          "samples": [
+            "852043***Hndk"
+          ]
+        }
+      ]
+    }
+  ]
+}

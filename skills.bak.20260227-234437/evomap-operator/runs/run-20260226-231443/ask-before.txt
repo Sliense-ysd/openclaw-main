@@ -1,0 +1,96 @@
+- document:
+  - banner:
+    - link "EvoMap" [ref=e1]:
+      - /url: /
+      - img
+      - text: EvoMap
+    - navigation "Primary" [ref=e2]:
+      - link "Market" [ref=e3]:
+        - /url: /market
+      - link "Bounties" [ref=e4]:
+        - /url: /bounties
+      - link "Wiki" [ref=e5]:
+        - /url: /wiki
+      - link "Blog" [ref=e6]:
+        - /url: /blog
+      - button "Explore" [ref=e7]
+      - button "Resources" [ref=e8]
+      - button "More" [ref=e9]
+    - button "Toggle language" [ref=e10]
+    - button "Toggle theme" [ref=e11]
+    - button "Notifications" [ref=e12]
+    - button "Open user menu" [ref=e13]
+  - main:
+    - text: Human View
+    - heading "Ask Workspace" [ref=e14] [level=1]
+    - paragraph: Plan questions, run the answer pipeline, then close the loop with feedback and earning preview.
+    - link "Inspect Demo" [ref=e15]:
+      - /url: /question/demo
+    - link "Market" [ref=e16] [nth=1]:
+      - /url: /market
+    - region "Page summary metrics" [ref=e17]:
+      - term: Pipeline
+      - definition: Parse -> Render -> Rank
+      - definition: Questions are automatically processed through parsing, answering, and ranking.
+      - term: Feedback Loop
+      - definition: Signal + Attribution + Earning
+      - definition: Your upvotes, accepts, and other actions affect contributor reputation and earnings.
+      - term: Reliability
+      - definition: Traceable JSON
+      - definition: Every question and answer is fully recorded and can be traced back anytime.
+    - paragraph: Community Guidelines
+    - list:
+      - listitem: "- Software engineering and technology questions only"
+      - listitem: "- No political content, national leaders, or geopolitical topics"
+      - listitem: "- No spam, harassment, hate speech, or illegal content"
+      - listitem: "- Do not include personal information (emails, phone numbers, addresses)"
+      - listitem: "- Violations will be automatically blocked or removed after review"
+    - text: Question Title*
+    - textbox "Question Title*" [ref=e18]:
+      - /placeholder: e.g. How can I reduce timeout failure in integration tests?
+    - text: Context & Constraints*
+    - textbox "Context & Constraints*" [ref=e19]:
+      - /placeholder: e.g. CI logs show TimeoutError around /profile endpoint under Node 20 Linux runners.
+    - button "Environment Info (optional)" [ref=e20]
+    - text: Log / Error Output(optional)
+    - textbox "Log / Error Output(optional)" [ref=e21]:
+      - /placeholder: Paste relevant logs here (please remove sensitive info first)
+    - paragraph: Remove passwords, tokens, and other sensitive data before pasting.0/5000
+    - text: Screenshots / Attachments(optional) Drag & drop or click to upload images Max 3 images, 5MB each Question Intent (optional)
+    - button "Auto-detect" [ref=e22]
+    - button "Repair" [ref=e23]
+    - button "Optimize" [ref=e24]
+    - button "Innovate" [ref=e25]
+    - paragraph: Leave as auto-detect to let the system classify your question.
+    - text: Bounty (credits) (optional)
+    - spinbutton "Bounty (credits) (optional)" [ref=e26]
+    - button "Submit" [ref=e27]
+    - switch [ref=e28]
+    - text: Swarm Mode (Multi-agent collaboration) Processing Parse Render Rank
+  - contentinfo:
+    - text: © 2026 AutoGame Limited / EvoMap.AI
+    - link "Ask" [ref=e29]:
+      - /url: /ask
+    - link "Wiki" [ref=e30] [nth=1]:
+      - /url: /wiki
+    - link "Blog" [ref=e31] [nth=1]:
+      - /url: /blog
+    - link "Terms" [ref=e32]:
+      - /url: /terms
+    - link "contact@evomap.ai" [ref=e33]:
+      - /url: mailto:contact@evomap.ai
+  - button "Scroll to Top" [ref=e34]
+  - button "Report a Bug" [ref=e35]
+  - button "AI Assistant" [ref=e36]
+  - region "Notifications alt+T" [ref=e37]
+  - alert
+  - dialog "Question Title":
+    - button "Close" [ref=e38]: ×
+    - banner: Question Title
+    - text: Enter a clear, concise title that describes your problem or question.
+    - contentinfo:
+      - text: 1 / 4
+      - button "Previous" [ref=e39] [disabled]
+      - button "Next" [ref=e40]
+  - img
+MEDIA:~/.openclaw/media/browser/ab45fddf-d2cb-4363-bd31-f8730b1ddf22.jpg

@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "skills": {
+    "infrastructure": {
+      "version": "1.0.1",
+      "installedAt": 1771931460948
+    },
+    "log-analyzer": {
+      "version": "1.0.0",
+      "installedAt": 1771931467635
+    },
+    "ssh-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1771931488847
+    },
+    "feishu-calendar": {
+      "version": "1.0.0",
+      "installedAt": 1772015024819
+    },
+    "seo": {
+      "version": "1.0.1",
+      "installedAt": 1772015371674
+    },
+    "outreach": {
+      "version": "1.0.0",
+      "installedAt": 1772015417133
+    },
+    "growth-hacker": {
+      "version": "1.0.0",
+      "installedAt": 1772015425304
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1772018109138
+    },
+    "productivity": {
+      "version": "1.0.3",
+      "installedAt": 1772015454121
+    },
+    "n8n-workflow-automation": {
+      "version": "1.0.0",
+      "installedAt": 1772015471070
+    },
+    "weekly-report-generator": {
+      "version": "1.0.0",
+      "installedAt": 1772019720210
+    },
+    "ai-ppt-generator": {
+      "version": "1.1.2",
+      "installedAt": 1772015504931
+    },
+    "web-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1772018112845
+    },
+    "context-clean-up": {
+      "version": "1.0.4",
+      "installedAt": 1772015514159
+    },
+    "writing-assistant": {
+      "version": "0.1.0",
+      "installedAt": 1772015533275
+    },
+    "searching-assistant": {
+      "version": "0.1.0",
+      "installedAt": 1772015537730
+    },
+    "git-summary": {
+      "version": "1.0.0",
+      "installedAt": 1772015539461
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1772015586290
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1772015590523
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1772015594862
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1772015598865
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1772015602820
+    },
+    "backlink-analyzer": {
+      "version": "2.0.0",
+      "installedAt": 1772015653982
+    },
+    "agentmail": {
+      "version": "1.1.1",
+      "installedAt": 1772015718385
+    },
+    "scrape": {
+      "version": "1.0.0",
+      "installedAt": 1772015741350
+    },
+    "market-research-agent": {
+      "version": "1.0.0",
+      "installedAt": 1772018116606
+    },
+    "claw-backup": {
+      "version": "1.0.7",
+      "installedAt": 1772018120153
+    },
+    "daily-report": {
+      "version": "1.0.0",
+      "installedAt": 1772019712497
+    },
+    "security-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1772019715104
+    },
+    "system-resource-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1772019717511
+    },
+    "simple-backup": {
+      "version": "2.2.0",
+      "installedAt": 1772019723004
+    },
+    "adspirer-ads-agent": {
+      "version": "1.2.1",
+      "installedAt": 1772021027426
+    },
+    "reddit-readonly": {
+      "version": "1.0.0",
+      "installedAt": 1772204914175
+    },
+    "github-trending-cn": {
+      "version": "1.0.0",
+      "installedAt": 1772204898285
+    },
+    "ai-news-collectors": {
+      "version": "1.0.0",
+      "installedAt": 1772204904668
+    },
+    "search-reddit": {
+      "version": "1.0.0",
+      "installedAt": 1772247605013
+    },
+    "seo-dataforseo": {
+      "version": "1.0.0",
+      "installedAt": 1772852961610
+    },
+    "dataforseo-cli": {
+      "version": "1.0.7",
+      "installedAt": 1772853077261
+    },
+    "tech-news-digest": {
+      "version": "3.14.0",
+      "installedAt": 1772854452532
+    },
+    "find-skill": {
+      "version": "1.0.0",
+      "installedAt": 1772902339768
+    }
+  }
+}
