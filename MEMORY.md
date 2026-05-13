@@ -7,10 +7,16 @@
 - 详细内容必须移到 `memory/YYYY-MM-DD.md`、`memory/reports/` 或 `memory/<topic>.md`
 - 如果某段内容已经过长，应改成“摘要 + 文件路径”
 
-## 2026-05-12 GitHub Backup Cron 状态索引
+## 2026-05-13 GitHub Backup Cron 状态索引
 
-- `.openclaw/workspace` 的 backup-github cron 已配置，但当前 Git 工作树没有 remote；cron 显示 `ok` 不等于已完成远端备份。
-- 处理前不要把该 workspace 视为已被 GitHub 备份保护；证据索引：`memory/2026-05-12.md` 与 `team-memory/PROJECT_STATUS.md`。
+- `.openclaw/workspace` 已成功配置 GitHub 远端备份：`https://github.com/Sliense-ysd/openclaw-main.git`
+- 历史问题：早期 commit 包含 `credentials/gcp-service-account.json`，被 GitHub secret scanning 阻止。
+- 解决方案：创建 orphan 分支重新初始化历史，移除敏感文件后强制推送。
+- 备份策略：
+  - 排除 `credentials/` 目录和所有 `.env` 文件
+  - 保留核心配置（SOUL.md、USER.md、MEMORY.md、AGENTS.md）
+  - 保留 memory/ 目录（但需定期清理过期文件）
+  - 排除 `node_modules/` 和 `dist/` 等构建产物
 
 ## 2026-03-10 Agent 对外开场与模型切换
 
